@@ -3,23 +3,23 @@ import { Options } from "@tsparticles/engine"
 export const particlesOptions: Options = {
     "particles": {
       "number": {
-        "value": 487,
+        "value": 80,
         "density": {
           "enable": true,
-          "value_area": 2048.6313566667195
+          "value_area": 800
         }
       },
       "color": {
-        "value": "#0002ef"
+        "value": "#0f11ef"
       },
       "shape": {
-        "type": "triangle",
+        "type": "circle",
         "stroke": {
-          "width": 2,
-          "color": "#efefef"
+          "width": 0,
+          "color": "#000000"
         },
         "polygon": {
-          "nb_sides": 4
+          "nb_sides": 5
         },
         "image": {
           "src": "img/github.svg",
@@ -28,8 +28,8 @@ export const particlesOptions: Options = {
         }
       },
       "opacity": {
-        "value": 0.5114558110170777,
-        "random": false,
+        "value": 1,
+        "random": true,
         "anim": {
           "enable": false,
           "speed": 1,
@@ -38,7 +38,7 @@ export const particlesOptions: Options = {
         }
       },
       "size": {
-        "value": 2,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -50,9 +50,9 @@ export const particlesOptions: Options = {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
+        "color": "#FFFFFF",
+        "opacity": 1,
+        "width": 2
       },
       "move": {
         "enable": true,
@@ -110,3 +110,4 @@ export const particlesOptions: Options = {
     },
     "retina_detect": true
   }
+  

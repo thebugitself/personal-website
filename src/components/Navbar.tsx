@@ -26,13 +26,13 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
     return (
         <nav className={`p-4 bg- ${isFixed ? "lg:fixed lg:left-0 lg:right-0 lg:top-0" : ""} ${isScrolled || isSolid ? "bg-transparent" : "bg-transparent"}`}>
             <div className='container mx-auto flex justify-between items-center'>
-                <div data-aos="fade-down" data-aos-duration="700" data-aos-delay="1500" className={`${poppins.className} text-white text-[18px]`}>
+                <div data-aos="fade-down" data-aos-duration="700" data-aos-delay="1400" className={`${poppins.className} text-white text-[18px]`}>
                     thebugitself
                 </div>
                 <div className='space-x-4'>
-                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="1800" href="#about" className={`${poppins.className}text-white hover:text-gray-300`}>About,</a>
-                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="1950" href="#project" className={`${poppins.className}text-white hover:text-gray-300`}>Project,</a>
-                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="2150" href="#contact" className={`${poppins.className}text-white hover:text-gray-300`}>Contact</a>
+                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="1550" href="#about" className={`${poppins.className}text-white hover:text-gray-300`}>About,</a>
+                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="1700" href="#project" className={`${poppins.className}text-white hover:text-gray-300`}>Project,</a>
+                    <a data-aos="fade-down" data-aos-duration="700" data-aos-delay="1850" href="#contact" className={`${poppins.className}text-white hover:text-gray-300`}>Contact</a>
                 </div>
             </div>
         </nav>
