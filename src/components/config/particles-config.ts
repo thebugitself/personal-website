@@ -6,7 +6,6 @@ export const particlesOptions: Options = {
       value: 80,
       density: {
         enable: true,
-        value_area: 1100,
       },
     },
     color: {
