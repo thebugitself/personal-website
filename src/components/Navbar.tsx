@@ -43,7 +43,7 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
             data-aos="fade-down"
             data-aos-duration="700"
             data-aos-delay="1800"
-            href="/"
+            href="/personal-website"
             className={`${poppins.className}text-white hover:text-gray-300`}
           >
             Home,
