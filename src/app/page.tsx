@@ -1,6 +1,5 @@
 "use client";
 
-import About from "@/components/About";
 import Hello from "@/components/Hello";
 import Navbar from "@/components/Navbar";
 import { ParticlesBackground } from "@/components/ParticlesBackground";

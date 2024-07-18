@@ -185,22 +185,23 @@ const Hello = () => {
           >
             {"development."}
           </span>
-          {/* <span
+          <br />
+          <br />
+          <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1450"
           >
-            {"development."}
-          </span> */}
-          {/* <span
+            {"There's "}
+          </span>
+          <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1500"
-            className="underline underline-offset-4"
           >
-            {"this "}
+            {"nothing "}
           </span>
           <span
             data-aos="fade-right"
@@ -208,7 +209,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1550"
           >
-            {' "website" '}
+            {"here, "}
           </span>
           <span
             data-aos="fade-right"
@@ -216,16 +217,15 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1600"
           >
-            {"is "}
+            {"please "}
           </span>
           <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1650"
-            className="underline underline-offset-4"
           >
-            {"to "}
+            {"come "}
           </span>
           <span
             data-aos="fade-right"
@@ -233,7 +233,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1700"
           >
-            {"show "}
+            {"back "}
           </span>
           <span
             data-aos="fade-right"
@@ -241,9 +241,9 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1750"
           >
-            {"off "}
+            {"later. "}
           </span>
-          <span
+          {/* <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
