@@ -3,6 +3,7 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 import { useAos } from "@/lib/useAos";
+import Link from "next/link";
 
 const poppins = Poppins({
   weight: "400",
@@ -39,16 +40,16 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
           thebugitself&apos;s personal website
         </div>
         <div className="flex flex-col items-center justify-center md:flex-row md:space-x-3 text-[25px]">
-          <a
+          <Link
             data-aos="fade-down"
             data-aos-duration="700"
             data-aos-delay="1800"
-            href="/personal-website"
+            href="/"
             className={`${poppins.className}text-white hover:text-gray-300`}
           >
             Home,
-          </a>
-          <a
+          </Link>
+          <Link
             data-aos="fade-down"
             data-aos-duration="700"
             data-aos-delay="1950"
@@ -56,8 +57,8 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
             className={`${poppins.className}text-white hover:text-gray-300`}
           >
             Github,
-          </a>
-          <a
+          </Link>
+          <Link
             data-aos="fade-down"
             data-aos-duration="700"
             data-aos-delay="2100"
@@ -65,7 +66,7 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
             className={`${poppins.className}text-white hover:text-gray-300`}
           >
             Blog
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
