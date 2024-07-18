@@ -1,7 +1,6 @@
 import { loadFull } from "tsparticles"
 import Particles, { initParticlesEngine } from "@tsparticles/react"
 import { useEffect, useMemo, useState } from "react"
-import { Container } from "@tsparticles/engine"
 import { particlesOptions } from "./config/particles-config"
 
 export const ParticlesBackground = () => {
