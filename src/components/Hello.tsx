@@ -19,9 +19,9 @@ const Hello = () => {
   useAos();
   return (
     <div className="flex justify-center mx-auto z-10">
-      <div className="bg-transparent lg:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col md:mt-44 lg:mt-48 xl:mt-36 mt-32 px-4 items-start">
+      <div className="bg-transparent lg:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col md:mt-56 lg:mt-48 xl:mt-36 mt-60 px-4 items-start">
         <h2
-          className={`${urbanist.className} xl:text-[180px] text-[100px] text-gray-100 font-bold`}
+          className={`${urbanist.className} xl:text-[180px] md:text-[100px] text-[50px] text-gray-100 font-bold`}
         >
           <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
             A
@@ -59,7 +59,7 @@ const Hello = () => {
           </span>
         </h2>
         <p
-          className={`${poppins.className} text-gray-200 lg:text-[25px] md:text-[20px] text-[16px]`}
+          className={`${poppins.className} text-gray-200 lg:text-[25px] md:text-[20px] text-[14px]`}
         >
           <span
             data-aos="fade-right"
@@ -183,7 +183,7 @@ const Hello = () => {
             data-aos-delay="1400"
             className="underline underline-offset-4"
           >
-            {"development "}
+            {"development."}
           </span>
           {/* <span
             data-aos="fade-right"
@@ -371,7 +371,7 @@ const Hello = () => {
         </p>
         <div className="flex justify-end w-full">
           <h2
-            className={`${urbanist.className} xl:text-[180px] text-[100px] font-bold text-gray-300`}
+            className={`${urbanist.className} xl:text-[180px] md:text-[100px] text-[50px] font-bold text-gray-300`}
           >
             <span
               data-aos="fade-up"
