@@ -36,7 +36,7 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
           data-aos-delay="1500"
           className={`${poppins.className} text-white text-[25px]`}
         >
-          thebugitself's personal website
+          thebugitself&apos;s personal website
         </div>
         <div className="flex flex-col items-center justify-center md:flex-row md:space-x-3 text-[25px]">
           <a
