@@ -19,7 +19,7 @@ const Hello = () => {
   useAos();
   return (
     <div className="flex justify-center mx-auto z-10">
-      <div className="bg-transparent md:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col lg:mt-36 mt-60 items-start">
+      <div className="bg-transparent md:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col lg:mt-36 mt-10 px-4 items-start">
         <h2
           className={`${urbanist.className} md:text-[180px] text-[100px] text-gray-100 font-bold`}
         >
