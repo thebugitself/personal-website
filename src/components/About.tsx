@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import img from "../..//public/assets/lain.png";
+import { useAos } from "@/lib/useAos";
 
 const poppins = Poppins({
   weight: "400",
@@ -17,13 +18,44 @@ const urbanist = Urbanist({
 });
 
 const About = () => {
+  useAos();
   return (
     <div className="flex justify-center mx-auto md:mt-52 lg:mt-40 mt-80 sm:mt-96">
       <div className="flex flex-col mx-auto bg-transparent md:w-[1500px] md:h-[550px] items-start gap-4 px-4">
         <h2
-          className={`${urbanist.className} xl:text-[180px] text-[100px] text-gray-100 font-bold`}
+          className={`${urbanist.className} xl:text-[180px] md:text-[100px] text-[50px] text-gray-100 font-bold`}
         >
-          Who I Am ?
+          <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
+            {"Who "}
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            {"I "}
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            {"A"}
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            {"m"}
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            {"?"}
+          </span>
         </h2>
         <div className="flex flex-col-reverse xl:flex-row justify-center xl:justify-between xl:items-start items-center gap-4 w-full">
           <div

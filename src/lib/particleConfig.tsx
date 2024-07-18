@@ -3,7 +3,7 @@ import type { ISourceOptions } from "@tsparticles/engine";
 const options: ISourceOptions = {
   particles: {
     number: {
-      value: 500,
+      value: 400,
       density: {
         enable: true,
       },
@@ -24,15 +24,15 @@ const options: ISourceOptions = {
       },
     },
     links: {
-      enable: false,
+      enable: true,
       distance: 125,
-      color: "#ffffff",
-      opacity: 0.4,
+      color: "#fff",
+      opacity: 0.2,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 1,
+      speed: 0.7,
       warp: true,
     },
   },
