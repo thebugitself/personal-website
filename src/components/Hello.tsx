@@ -19,47 +19,47 @@ const Hello = () => {
   useAos();
   return (
     <div className="flex justify-center mx-auto z-10">
-      <div className="bg-transparent md:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col lg:mt-36 mt-10 px-4 items-start">
+      <div className="bg-transparent lg:w-[1500px] md:h-[550px] lg:mx-2 flex flex-col md:mt-44 lg:mt-48 xl:mt-36 mt-32 px-4 items-start">
         <h2
-          className={`${urbanist.className} md:text-[180px] text-[100px] text-gray-100 font-bold`}
+          className={`${urbanist.className} xl:text-[180px] text-[100px] text-gray-100 font-bold`}
         >
           <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
-            H
+            A
           </span>
           <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-            e
+            k
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            l
+            h
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="150"
           >
-            l
+            d
           </span>
-          {/* <span
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              a
-            </span>
-            <span
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="250"
-            >
-              n
-            </span> */}
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            a
+          </span>
+          <span
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="250"
+          >
+            n
+          </span>
         </h2>
         <p
-          className={`${poppins.className} text-gray-200 text-[30px] font-light`}
+          className={`${poppins.className} text-gray-200 lg:text-[25px] md:text-[20px] text-[16px]`}
         >
           <span
             data-aos="fade-right"
@@ -67,7 +67,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="700"
           >
-            {`Hi, `}
+            {`I'm `}
           </span>
           <span
             data-aos="fade-right"
@@ -75,7 +75,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="750"
           >
-            {`i'm `}
+            {`an `}
           </span>
           <span
             data-aos="fade-right"
@@ -83,7 +83,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="800"
           >
-            {`Len, `}
+            {`Informatic `}
           </span>
           <span
             data-aos="fade-right"
@@ -91,7 +91,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="850"
           >
-            {`and `}
+            {`Engineering `}
           </span>
           <span
             data-aos="fade-right"
@@ -100,7 +100,7 @@ const Hello = () => {
             data-aos-delay="900"
             className="underline underline-offset-4"
           >
-            {"I "}
+            {"student "}
           </span>
           <span
             data-aos="fade-right"
@@ -108,7 +108,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="950"
           >
-            {"am "}
+            {"at "}
           </span>
           <span
             data-aos="fade-right"
@@ -116,7 +116,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1000"
           >
-            {"too "}
+            {"Institut "}
           </span>
           <span
             data-aos="fade-right"
@@ -124,7 +124,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1050"
           >
-            {"lazy "}
+            {"Teknologi "}
           </span>
           <span
             data-aos="fade-right"
@@ -132,16 +132,15 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1100"
           >
-            {"to "}
+            {"Sumatera, "}
           </span>
           <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1150"
-            className="underline underline-offset-4"
           >
-            {`build`}
+            {`passionate`}
           </span>
           <span
             data-aos="fade-right"
@@ -149,7 +148,7 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1200"
           >
-            {` this `}
+            {` about `}
           </span>
           <span
             data-aos="fade-right"
@@ -158,7 +157,7 @@ const Hello = () => {
             data-aos-delay="1250"
             className="underline underline-offset-4"
           >
-            {`website.`}
+            {`cybersecurity `}
           </span>
           <span
             data-aos="fade-right"
@@ -166,33 +165,35 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1300"
           >
-            {` So `}
+            {`and `}
           </span>
           <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1350"
+            className="underline underline-offset-4"
           >
-            {`the `}
+            {`software `}
           </span>
           <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1400"
+            className="underline underline-offset-4"
           >
-            {"purpose "}
+            {"development "}
           </span>
-          <span
+          {/* <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1450"
           >
-            {"of "}
-          </span>
-          <span
+            {"development."}
+          </span> */}
+          {/* <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
@@ -366,39 +367,39 @@ const Hello = () => {
             data-aos-delay="2500"
           >
             {" later."}
-          </span>
+          </span> */}
         </p>
         <div className="flex justify-end w-full">
           <h2
-            className={`${urbanist.className} md:text-[180px] text-[100px] font-bold text-gray-300`}
+            className={`${urbanist.className} xl:text-[180px] text-[100px] font-bold text-gray-300`}
           >
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="350"
             >
-              Y
+              A
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="400"
             >
-              e
+              r
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="450"
             >
-              a
+              i
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="500"
             >
-              h
+              f
             </span>
           </h2>
         </div>

@@ -1,7 +1,7 @@
 import { loadFull } from "tsparticles";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
-import particleConfig from "@/components/particleConfig";
+import particleConfig from "@/lib/particleConfig";
 
 export const ParticlesBackground = () => {
   const [init, setInit] = useState(false);

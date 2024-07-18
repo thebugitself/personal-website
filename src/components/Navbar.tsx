@@ -35,11 +35,11 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
           data-aos="fade-down"
           data-aos-duration="700"
           data-aos-delay="1500"
-          className={`${poppins.className} text-white text-[25px]`}
+          className={`${poppins.className} text-white lg:text-[25px] md:text-[20px] text-[16px]`}
         >
-          thebugitself&apos;s personal website
+          Len&apos;s personal site
         </div>
-        <div className="flex flex-col items-center justify-center md:flex-row md:space-x-3 text-[25px]">
+        <div className="flex flex-col items-center justify-center md:flex-row md:space-x-3 lg:text-[25px] md:text-[20px] text-[16px]">
           <Link
             data-aos="fade-down"
             data-aos-duration="700"
@@ -54,6 +54,7 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
             data-aos-duration="700"
             data-aos-delay="1950"
             href="https://github.com/thebugitself"
+            target="_blank"
             className={`${poppins.className}text-white hover:text-gray-300`}
           >
             Github,
@@ -62,6 +63,7 @@ const Navbar = ({ isSolid = false, isFixed = false }) => {
             data-aos="fade-down"
             data-aos-duration="700"
             data-aos-delay="2100"
+            target="_blank"
             href="https://medium.com/@anophylen"
             className={`${poppins.className}text-white hover:text-gray-300`}
           >

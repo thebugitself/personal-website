@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/About";
 import Hello from "@/components/Hello";
 import Navbar from "@/components/Navbar";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
@@ -26,6 +27,7 @@ export default function Home() {
       <ParticlesBackground />
       <Navbar />
       <Hello />
+      {/* <About /> */}
     </main>
   );
 }
