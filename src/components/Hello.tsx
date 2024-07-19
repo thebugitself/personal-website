@@ -24,26 +24,26 @@ const Hello = () => {
           className={`${urbanist.className} xl:text-[180px] md:text-[100px] text-[50px] text-gray-100 font-bold`}
         >
           <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
-            A
+            H
           </span>
           <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-            k
+            e
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            h
+            l
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="150"
           >
-            d
+            l
           </span>
-          <span
+          {/* <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
@@ -56,12 +56,12 @@ const Hello = () => {
             data-aos-delay="250"
           >
             n
-          </span>
+          </span> */}
         </h2>
         <p
           className={`${poppins.className} text-gray-200 lg:text-[25px] md:text-[20px] text-[14px]`}
         >
-          <span
+          {/* <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
@@ -186,7 +186,7 @@ const Hello = () => {
             {"development."}
           </span>
           <br />
-          <br />
+          <br /> */}
           <span
             data-aos="fade-right"
             data-aos-offset="200"
@@ -378,28 +378,28 @@ const Hello = () => {
               data-aos-duration="1000"
               data-aos-delay="350"
             >
-              A
+              Y
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="400"
             >
-              r
+              e
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="450"
             >
-              i
+              a
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="500"
             >
-              f
+              h
             </span>
           </h2>
         </div>
