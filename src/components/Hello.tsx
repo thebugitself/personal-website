@@ -241,18 +241,18 @@ const Hello = () => {
             data-aos-duration="200"
             data-aos-delay="1750"
           >
-            {"later. "}
+            {"later, "}
           </span>
-          {/* <span
+          <span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
             data-aos-delay="1800"
             className="underline underline-offset-4"
           >
-            {"my "}
+            {"h3h3."}
           </span>
-          <span
+          {/*<span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
