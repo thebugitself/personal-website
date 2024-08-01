@@ -2,6 +2,7 @@ import { useAos } from "@/lib/useAos";
 import React from "react";
 import { Poppins } from "next/font/google";
 import { Urbanist } from "next/font/google";
+import Link from "next/link"
 
 const poppins = Poppins({
   weight: "400",
@@ -24,24 +25,24 @@ const Hello = () => {
           className={`${urbanist.className} xl:text-[180px] md:text-[100px] text-[50px] text-gray-100 font-bold`}
         >
           <span data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
-            H
+            1
           </span>
           <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-            e
+            0
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            l
+            0
           </span>
           <span
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="150"
           >
-            l
+            %
           </span>
           {/* <span
             data-aos="fade-up"
@@ -58,6 +59,15 @@ const Hello = () => {
             n
           </span> */}
         </h2>
+        <Link
+          data-aos="fade-right"
+          data-aos-duration="200"
+          data-aos-delay="1200"
+          href="https://youtu.be/fC7oUOUEEi4?si=NhQLOXLwTUfyD33r"
+          target="_blank"
+          className="text-gray-200 lg-text-[25px] md:text-[20px] text-[14px]"
+          >click me
+        </Link>
         <p
           className={`${poppins.className} text-gray-200 lg:text-[25px] md:text-[20px] text-[14px]`}
         >
@@ -187,7 +197,7 @@ const Hello = () => {
           </span>
           <br />
           <br /> */}
-          <span
+          {/*<span
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-duration="200"
@@ -251,7 +261,7 @@ const Hello = () => {
             className="underline underline-offset-4"
           >
             {"h3h3."}
-          </span>
+          </span>*/}
           {/*<span
             data-aos="fade-right"
             data-aos-offset="200"
@@ -378,28 +388,28 @@ const Hello = () => {
               data-aos-duration="1000"
               data-aos-delay="350"
             >
-              Y
+              No
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="400"
             >
-              e
+              S
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="450"
             >
-              a
+              ca
             </span>
             <span
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="500"
             >
-              h
+              m
             </span>
           </h2>
         </div>
