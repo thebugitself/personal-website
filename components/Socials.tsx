@@ -22,7 +22,7 @@ const socials: Social[] = [
   },
   {
     icon: <FaLinkedinIn />,
-    path: "https://linkedin.com/akhdanarf",
+    path: "https://www.linkedin.com/in/akhdanarf/",
   },
   {
     icon: <FaMedium />,
