@@ -15,7 +15,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Penetration Tester</span>
             <h1 className="h1 mb-6 ">
-              Uhh um, I'm <br />
+              Uhh um, I&apos;m <br />
               <span className="text-accent">Len</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
