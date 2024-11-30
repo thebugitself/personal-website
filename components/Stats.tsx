@@ -37,7 +37,9 @@ const Stats = () => {
                   duration={5}
                   className="text-6xl text-accent"
                 />
-                <span className="text-white text-xl">{stat.text}</span>
+                <span className="text-white text-xl font-semibold">
+                  {stat.text}
+                </span>
               </div>
             );
           })}
