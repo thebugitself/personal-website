@@ -1,12 +1,34 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
-import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
   return (
     <main className="h-full">
+      {/* Top Seamless Marquee */}
+      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[3deg] overflow-hidden mt-[-20px] shadow-md">
+        <motion.div
+          className="flex gap-[43px]"
+          animate={{ x: ["-100%", "0%"] }} // Moves left to right seamlessly
+          transition={{
+            duration: 41, // Duration of one full scroll
+            repeat: Infinity, // Infinite loop
+            ease: "linear", // Smooth continuous motion
+          }}
+        >
+          {Array.from({ length: 12 }, (_, i) => (
+            <h2 key={`top-${i}`}>THEBUGITSELF</h2>
+          ))}
+          {Array.from({ length: 12 }, (_, i) => (
+            <h2 key={`top-duplicate-${i}`}>THEBUGITSELF</h2>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Main Content */}
       <div className="container mx-auto h-full px-14">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
@@ -14,12 +36,12 @@ export default function Home() {
           </div>
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Penetration Tester</span>
-            <h1 className="h1 mb-6 ">
+            <h1 className="h1 mb-6">
               Uhh um, I&apos;m <br />
               <span className="text-accent">Len</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
-              I really love learning and exploring various topic and wanna be
+              I really love learning and exploring various topics and wanna be
               master in all of them.
             </p>
           </div>
@@ -33,6 +55,26 @@ export default function Home() {
             iconStyles="w-9 h-9 border-accent rounded-full flex items-center justify-center hover:text-accent text-base"
           />
         </div>
+      </div>
+
+      {/* Bottom Seamless Marquee */}
+      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden mt-[-120px] shadow-md">
+        <motion.div
+          className="flex gap-[43px]"
+          animate={{ x: ["0%", "-100%"] }} // Moves right to left seamlessly
+          transition={{
+            duration: 41, // Duration of one full scroll
+            repeat: Infinity, // Infinite loop
+            ease: "linear", // Smooth continuous motion
+          }}
+        >
+          {Array.from({ length: 12 }, (_, i) => (
+            <h2 key={`bottom-${i}`}>THEBUGITSELF</h2>
+          ))}
+          {Array.from({ length: 12 }, (_, i) => (
+            <h2 key={`bottom-duplicate-${i}`}>THEBUGITSELF</h2>
+          ))}
+        </motion.div>
       </div>
     </main>
   );
