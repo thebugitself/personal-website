@@ -58,7 +58,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Seamless Marquee */}
-      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden xl:mt-[-120px] shadow-md">
+      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden xl:mt-[-120px] mt-[-60px] shadow-md">
         <motion.div
           className="flex gap-[43px]"
           animate={{ x: ["0%", "-100%"] }} // Moves right to left seamlessly
