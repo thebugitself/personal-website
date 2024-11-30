@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="h-full">
       {/* Top Seamless Marquee */}
-      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[3deg] overflow-hidden mt-[-20px] shadow-md">
+      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[3deg] overflow-hidden xl:mt-[-20px] mt-[-35px] shadow-md">
         <motion.div
           className="flex gap-[43px]"
           animate={{ x: ["-100%", "0%"] }} // Moves left to right seamlessly
@@ -58,7 +58,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Seamless Marquee */}
-      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden mt-[-120px] shadow-md">
+      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden xl:mt-[-120px] shadow-md">
         <motion.div
           className="flex gap-[43px]"
           animate={{ x: ["0%", "-100%"] }} // Moves right to left seamlessly
