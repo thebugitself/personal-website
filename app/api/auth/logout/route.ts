@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST() {
+export async function POST(request: Request) {
   const response = NextResponse.json({ message: "Logout successful" });
 
   // Clear the `auth_token` cookie
