@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import jwt from "jsonwebtoken";
+import { jwtVerify } from "jose"; // Menggunakan jose untuk validasi JWT
 
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get("auth_token")?.value;
@@ -14,8 +14,16 @@ export async function middleware(req: NextRequest) {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!);
-    console.log("Decoded JWT:", decoded); // Debugging decoded token
+    // Gunakan kunci rahasia yang sama dengan saat membuat token
+    const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+
+    // Verifikasi token menggunakan jose
+    const { payload } = await jwtVerify(token, secret);
+
+    // Debugging decoded token
+    console.log("Decoded JWT:", payload);
+
+    // Jika token valid, lanjutkan request
     return NextResponse.next();
   } catch (error) {
     console.error("Invalid token:", error);
