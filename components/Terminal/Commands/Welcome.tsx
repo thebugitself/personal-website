@@ -14,6 +14,17 @@ const Welcome: React.FC = () => {
         </pre>
       </div>
       <div>
+        You can find me on{" "}
+        <a
+          href="https://linkedin.com/in/akhdanarf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline"
+        >
+          LinkedIn
+        </a>
+      </div>
+      <div>
         Type <span className="text-green-400">help</span> to see available
         commands.
       </div>

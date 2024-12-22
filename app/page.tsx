@@ -38,11 +38,12 @@ export default function Home() {
             <span>Penetration Tester</span>
             <h1 className="h1 mb-6">
               Uhh um, I&apos;m <br />
-              <span className="text-accent">Len</span>
+              <span className="text-accent">Akhdan</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
-              I really love learning and exploring various topics and wanna be
-              master in all of them.
+              {
+                "The more I learn, the more I realize how much I don't know. – Albert Einstein"
+              }
             </p>
           </div>
           <div className="order-4 xl:order-none">
