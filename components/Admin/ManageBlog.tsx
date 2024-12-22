@@ -11,6 +11,7 @@ const ManageBlog = () => {
   const [form, setForm] = useState({
     id: null,
     title: "",
+    slug: "",
     description: "",
     date: "",
     content: "",
@@ -45,7 +46,7 @@ const ManageBlog = () => {
     e.preventDefault();
 
     if (!form.title || !form.description || !form.date || !form.content) {
-      setError("Semua field harus diisi.");
+      setError("All fields must be filled.");
       return;
     }
 
@@ -66,13 +67,20 @@ const ManageBlog = () => {
       }
 
       setPopupVisible(false);
-      setForm({ id: null, title: "", description: "", date: "", content: "" });
+      setForm({
+        id: null,
+        title: "",
+        slug: "",
+        description: "",
+        date: "",
+        content: "",
+      });
       const updatedBlogs = await fetch("/api/blog").then((res) => res.json());
       setBlogs(updatedBlogs);
       setError(null);
       setIsEditing(false);
     } catch (error) {
-      console.error("Error saat submit blog:", error);
+      console.error("Error submitting blog:", error);
       setError((error as Error).message || "An error occurred");
     }
   };
@@ -100,6 +108,7 @@ const ManageBlog = () => {
     setForm({
       id: blog.id,
       title: blog.title,
+      slug: blog.slug,
       description: blog.description,
       date: blog.date.split("T")[0],
       content: blog.content,
@@ -118,10 +127,11 @@ const ManageBlog = () => {
         <button
           onClick={() => {
             setPopupVisible(true);
-            setIsEditing(false); // Set ke mode tambah
+            setIsEditing(false); // Set to add mode
             setForm({
               id: null,
               title: "",
+              slug: "",
               description: "",
               date: "",
               content: "",

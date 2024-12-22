@@ -14,7 +14,7 @@ function truncate(text: string, wordLimit: number) {
 export default function BlogList() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null); // Define type as string | null
 
   // Fetch data dari API
   useEffect(() => {

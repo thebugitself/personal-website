@@ -1,14 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" });
-  }
+export async function POST() {
+  const response = NextResponse.json({ message: "Logout successful" });
 
-  // Set cookie `auth_token` dengan Max-Age 0 untuk menghapusnya
-  res.setHeader(
-    "Set-Cookie",
-    "auth_token=; Path=/; Max-Age=0; HttpOnly; SameSite=Strict"
-  );
-  res.status(200).json({ message: "Logout successful" });
+  // Clear the `auth_token` cookie
+  response.cookies.set("auth_token", "", {
+    path: "/",
+    expires: new Date(0), // Expire immediately
+  });
+
+  return response;
 }
