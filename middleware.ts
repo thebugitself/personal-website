@@ -10,7 +10,7 @@ export async function middleware(req: NextRequest) {
 
   if (!token) {
     console.error("No token provided");
-    return NextResponse.redirect(new URL("/app/login", req.url));
+    return NextResponse.redirect(new URL("/login", req.url));
   }
 
   try {
@@ -19,10 +19,10 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   } catch (error) {
     console.error("Invalid token:", error);
-    return NextResponse.redirect(new URL("/app/login", req.url));
+    return NextResponse.redirect(new URL("/login", req.url));
   }
 }
 
 export const config = {
-  matcher: ["/app/admin/:path*"], // Middleware hanya untuk halaman admin
+  matcher: ["/admin/:path*"], // Middleware hanya untuk halaman admin
 };
