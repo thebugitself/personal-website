@@ -15,46 +15,16 @@ const Terminal: React.FC = () => {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>(["welcome"]);
   const [rerender, setRerender] = useState(false);
-  const [historyIndex, setHistoryIndex] = useState<number | null>(null);
 
   const handleCommand = (command: string) => {
-    if (command.trim() === "") return;
-
     setHistory([...history, command]);
     setInput("");
-    setHistoryIndex(null); // Reset history index
     setRerender(true);
   };
 
   const clearHistory = () => {
     setHistory([]);
   };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "ArrowUp") {
-      // Navigate up in the history
-      if (historyIndex === null) {
-        setHistoryIndex(history.length - 1);
-      } else if (historyIndex > 0) {
-        setHistoryIndex((prev) => (prev !== null ? prev - 1 : null));
-      }
-    } else if (e.key === "ArrowDown") {
-      // Navigate down in the history
-      if (historyIndex !== null && historyIndex < history.length - 1) {
-        setHistoryIndex((prev) => (prev !== null ? prev + 1 : null));
-      } else {
-        setHistoryIndex(null); // Reset index if at the bottom
-      }
-    }
-  };
-
-  useEffect(() => {
-    if (historyIndex !== null) {
-      setInput(history[historyIndex]);
-    } else {
-      setInput("");
-    }
-  }, [historyIndex]);
 
   useEffect(() => {
     if (rerender) {
@@ -95,7 +65,6 @@ const Terminal: React.FC = () => {
             className="flex-1 bg-transparent border-none focus:outline-none text-gray-200 placeholder-gray-500"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
             placeholder=""
             autoFocus
           />
