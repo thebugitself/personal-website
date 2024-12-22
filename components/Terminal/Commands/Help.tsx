@@ -2,8 +2,11 @@ const Help: React.FC = () => {
   return (
     <div>
       Available commands: <br />
+      - welcome <br />
+      - clear <br />
+      - help <br />
       - about <br />
-      - clear <br />- help
+      - project <br />
     </div>
   );
 };

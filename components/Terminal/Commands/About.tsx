@@ -1,8 +1,10 @@
 const About: React.FC = () => {
   return (
     <div>
-      Hi, my name is Len! <br />
-      I&apos;m a full-stack developer passionate about building applications.
+      Hi, my name is Akhdan.
+      <br />
+      I&apos;m an Undergraduate Informatics Engineering Student at Institut
+      Teknologi Sumatera with an Interest in Cybersecurity.
     </div>
   );
 };

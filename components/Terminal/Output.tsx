@@ -2,6 +2,7 @@ import About from "./Commands/About";
 import Clear from "./Commands/Clear";
 import Help from "./Commands/Help";
 import Welcome from "./Commands/Welcome";
+import Project from "./Commands/Project";
 
 type Props = {
   index: number;
@@ -16,6 +17,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
         about: <About />,
         clear: <Clear />,
         help: <Help />,
+        project: <Project />,
       }[cmd] || <div>command not found: {cmd}</div>}
     </div>
   );
