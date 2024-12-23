@@ -10,7 +10,10 @@ const Header = () => {
   const pathname = usePathname();
 
   // Tentukan apakah header perlu disembunyikan
-  const hideHeader = pathname === "/login" || pathname.startsWith("/admin");
+  const hideHeader =
+    pathname === "/login" ||
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/blog/");
 
   // Jangan render header jika perlu disembunyikan
   if (hideHeader) {
