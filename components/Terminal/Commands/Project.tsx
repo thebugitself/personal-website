@@ -10,7 +10,7 @@ const Project: React.FC = () => {
             rel="noopener noreferrer"
             className="text-blue-400 hover:underline"
           >
-            Cipher EncDec
+            Cipher Encode Decode Website
           </a>
         </li>
       </ul>
