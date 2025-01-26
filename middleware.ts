@@ -5,7 +5,6 @@ import { jwtVerify } from "jose";
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl.pathname;
 
-  // Daftar rute publik yang tidak membutuhkan autentikasi
   const publicPaths = ["/blog", "/blog/:slug", "/login", "/terminal"];
   if (publicPaths.some((path) => url.startsWith(path))) {
     return NextResponse.next();
@@ -27,5 +26,5 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/dashboard/:path*"], // Middleware hanya untuk admin dan dashboard
+  matcher: ["/admin/:path*", "/dashboard/:path*"],
 };
