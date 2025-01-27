@@ -19,3 +19,13 @@
     @apply text-[20px]  xl:text-[24px] leading-[1.1] font-semibold;
   }
 }
+
+.swiper-button-next,
+.swiper-button-prev{
+  color: transparent !important; /* Kuning */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: transparent !important; /* Warna kuning lebih gelap untuk hover */
+}

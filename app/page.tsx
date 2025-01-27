@@ -6,13 +6,26 @@ import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 
 export default function Home() {
+  const marqueeVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { delay: 1, duration: 0.5, ease: "easeInOut" },
+    },
+  };
+
   return (
     <main className="h-full">
       {/* Top Seamless Marquee */}
-      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[3deg] overflow-hidden xl:mt-[-20px] mt-[-35px] shadow-md">
+      <motion.div
+        className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[3deg] overflow-hidden xl:mt-[-20px] mt-[-35px] shadow-md"
+        variants={marqueeVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <motion.div
           className="flex gap-[43px]"
-          animate={{ x: ["-100%", "0%"] }} // Moves left to right seamlessly
+          animate={{ x: ["-100%", "0%"] }}
           transition={{
             duration: 41, // Duration of one full scroll
             repeat: Infinity, // Infinite loop
@@ -26,7 +39,7 @@ export default function Home() {
             <h2 key={`top-duplicate-${i}`}>THEBUGITSELF</h2>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Main Content */}
       <div className="container mx-auto h-full px-14">
@@ -59,14 +72,19 @@ export default function Home() {
       </div>
 
       {/* Bottom Seamless Marquee */}
-      <div className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden xl:mt-[-120px] mt-[-60px] shadow-md">
+      <motion.div
+        className="absolute z-1 w-full bg-accent text-primary py-[10px] rotate-[-3deg] overflow-hidden xl:mt-[-120px] mt-[-60px] shadow-md"
+        variants={marqueeVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <motion.div
           className="flex gap-[43px]"
-          animate={{ x: ["0%", "-100%"] }} // Moves right to left seamlessly
+          animate={{ x: ["0%", "-100%"] }}
           transition={{
             duration: 41, // Duration of one full scroll
             repeat: Infinity, // Infinite loop
-            ease: "linear", // Smooth continuous motion
+            ease: "linear",
           }}
         >
           {Array.from({ length: 12 }, (_, i) => (
@@ -76,7 +94,7 @@ export default function Home() {
             <h2 key={`bottom-duplicate-${i}`}>THEBUGITSELF</h2>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </main>
   );
 }
