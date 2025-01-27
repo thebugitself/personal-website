@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose } from "@/components/ui/dialog";
-import { Separator } from "@/components/ui/separator";
 import {
   SheetContent,
   SheetHeader,
@@ -10,11 +9,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Banknote, Folder, HomeIcon, Settings } from "lucide-react";
+import { Banknote, Folder, HomeIcon, List, Pencil } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
 export default function DashboardTopNav({ children }: { children: ReactNode }) {
+  const handleLogout = async () => {
+    try {
+      const response = await fetch("/api/auth/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Logout failed");
+      }
+
+      const data = await response.json();
+      window.location.href = "/"; // Redirect to the homepage or login page
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
   return (
     <div className="flex flex-col">
       {/* Header */}
@@ -40,16 +59,35 @@ export default function DashboardTopNav({ children }: { children: ReactNode }) {
                 </Link>
               </DialogClose>
               <DialogClose asChild>
-                <Link href="/dashboard/blogs">
+                <Link href="/dashboard/blog-article/create">
                   <Button variant="hehey">
-                    <Folder className="mr-2 h-4 w-4" />
-                    Manage Blogs
+                    <Pencil className="mr-2 h-4 w-4" />
+                    Create Blog
+                  </Button>
+                </Link>
+              </DialogClose>
+              <DialogClose asChild>
+                <Link href="/dashboard/blog-article/list">
+                  <Button variant="hehey">
+                    <List className="mr-2 h-4 w-4" />
+                    List Blogs
                   </Button>
                 </Link>
               </DialogClose>
             </div>
           </SheetContent>
         </Dialog>
+
+        {/* Logout Button */}
+        <div className="flex items-center">
+          <Button
+            variant="ghost"
+            onClick={handleLogout}
+            className="ml-auto hover:bg-muted"
+          >
+            Logout
+          </Button>
+        </div>
       </header>
       {/* Children Content */}
       <main className="flex-1">{children}</main>

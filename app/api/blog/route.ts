@@ -1,23 +1,45 @@
 import { NextResponse } from "next/server";
 import db from "@/db";
 
-// GET: Fetch all blogs
-export async function GET() {
+// **GET: Fetch all blogs OR a single blog by slug**
+export async function GET(req: Request) {
   try {
-    console.log("Fetching blogs...");
-    const blogs = await db.blog.findMany();
-    console.log("Blogs fetched successfully:", blogs);
-    return NextResponse.json(blogs);
+    const { searchParams } = new URL(req.url);
+    const slug = searchParams.get("slug");
+
+    if (slug) {
+      // Ambil satu blog berdasarkan slug
+      console.log(`Fetching blog with slug: ${slug}`);
+      const blog = await db.blog.findUnique({
+        where: { slug },
+      });
+
+      if (!blog) {
+        return NextResponse.json(
+          { message: "Blog not found" },
+          { status: 404 }
+        );
+      }
+
+      console.log("Blog fetched successfully:", blog);
+      return NextResponse.json(blog);
+    } else {
+      // Ambil semua blog
+      console.log("Fetching all blogs...");
+      const blogs = await db.blog.findMany();
+      console.log("Blogs fetched successfully:", blogs);
+      return NextResponse.json(blogs);
+    }
   } catch (error) {
-    console.error("Error fetching blogs:", error);
+    console.error("Error fetching blog(s):", error);
     return NextResponse.json(
-      { message: "Error fetching blogs" },
+      { message: "Error fetching blog(s)" },
       { status: 500 }
     );
   }
 }
 
-// POST: Add a new blog
+// **POST: Add a new blog**
 export async function POST(req: Request) {
   try {
     const newBlog = await req.json();
@@ -34,8 +56,8 @@ export async function POST(req: Request) {
     const createdBlog = await db.blog.create({
       data: {
         title: newBlog.title,
-        slug: newBlog.slug || newBlog.title.toLowerCase().replace(/\s+/g, "-"), // Generate slug if not provided
-        content: newBlog.content || "", // Ensure content has a default value
+        slug: newBlog.slug || newBlog.title.toLowerCase().replace(/\s+/g, "-"),
+        content: newBlog.content || "",
         description: newBlog.description,
         date: new Date(newBlog.date),
       },
@@ -55,19 +77,19 @@ export async function POST(req: Request) {
   }
 }
 
-// PUT: Update a blog
+// **PUT: Update a blog**
 export async function PUT(req: Request) {
   try {
     const updatedBlog = await req.json();
 
     if (
-      !updatedBlog.id ||
+      !updatedBlog.slug ||
       !updatedBlog.title ||
       !updatedBlog.description ||
       !updatedBlog.date
     ) {
       return NextResponse.json(
-        { message: "ID, title, description, and date are required." },
+        { message: "Slug, title, description, and date are required." },
         { status: 400 }
       );
     }
@@ -75,13 +97,13 @@ export async function PUT(req: Request) {
     console.log("Data received in PUT API:", updatedBlog);
 
     const blog = await db.blog.update({
-      where: { id: updatedBlog.id },
+      where: { slug: updatedBlog.slug },
       data: {
         title: updatedBlog.title,
         slug:
           updatedBlog.slug ||
           updatedBlog.title.toLowerCase().replace(/\s+/g, "-"),
-        content: updatedBlog.content || "", // Update rich text content
+        content: updatedBlog.content || "",
         date: new Date(updatedBlog.date),
         description: updatedBlog.description,
       },
@@ -101,22 +123,22 @@ export async function PUT(req: Request) {
   }
 }
 
-// DELETE: Delete a blog
+// **DELETE: Delete a blog**
 export async function DELETE(req: Request) {
   try {
-    const { id } = await req.json();
+    const { slug } = await req.json();
 
-    if (!id) {
+    if (!slug) {
       return NextResponse.json(
-        { message: "Blog ID is required." },
+        { message: "Blog slug is required." },
         { status: 400 }
       );
     }
 
-    console.log("Deleting blog with ID:", id);
+    console.log("Deleting blog with slug:", slug);
 
     await db.blog.delete({
-      where: { id },
+      where: { slug },
     });
 
     console.log("Blog successfully deleted.");
