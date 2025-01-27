@@ -33,6 +33,7 @@
     "react-quill": "^2.0.0",
     "react-quill-image-uploader": "^0.1.1",
     "sass": "^1.83.4",
+    "sharp": "^0.33.5",
     "swiper": "^11.2.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
