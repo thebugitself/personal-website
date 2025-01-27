@@ -48,14 +48,14 @@ export default function Home() {
             <Photo />
           </div>
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>Penetration Tester</span>
+            <span>I&apos;m Akhdan</span>
             <h1 className="h1 mb-6">
-              Uhh um, I&apos;m <br />
-              <span className="text-accent">Akhdan</span>
+              FULLSTACK <br />
+              <span className="text-accent">DEVELOPER.</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
               {
-                "The more I learn, the more I realize how much I don't know. – Albert Einstein"
+                "I'm a Fullstack Developer based in Indonesia. I specialize in building Web Applications using Next JS and other modern tech."
               }
             </p>
           </div>
