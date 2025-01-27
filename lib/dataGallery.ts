@@ -1,5 +1,5 @@
 import wisata1 from '@/public/images/projects/wisata1.png'
-import pplk3 from '@/public/images/projects/pplk3.png'
+import pplk11 from '@/public/images/projects/pplk11.png'
 
 export const projects = [
   {
@@ -13,7 +13,7 @@ export const projects = [
       name: "PPLK ITERA 2024",
       client: "Decimal",
       description: "A website for PPLK ITERA 2024, a student organization in ITERA. Built with Laravel, React, and TailwindCSS.",
-      src: pplk3,
+      src: pplk11,
       year: 2024,
   }
 ]
