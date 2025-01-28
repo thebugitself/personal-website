@@ -11,7 +11,7 @@ const Header = () => {
 
   const hideHeader =
     pathname === "/login" ||
-    pathname.startsWith("/admin") ||
+    pathname.startsWith("/dashboard") ||
     pathname.startsWith("/blog/");
 
   if (hideHeader) {

@@ -25,7 +25,7 @@ export default function LoginPage() {
       setLoading(false); // Set loading false setelah respon diterima
 
       if (res.ok) {
-        router.push("/admin"); // Redirect ke halaman admin
+        router.push("/dashboard"); // Redirect ke halaman dashboard
       } else {
         const data = await res.json();
         setError(data.message || "Login failed");
