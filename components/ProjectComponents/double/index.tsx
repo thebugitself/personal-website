@@ -10,6 +10,7 @@ interface Project {
   description: string;
   src: string | StaticImageData;
   year: number;
+  link: string;
 }
 
 interface IndexProps {
@@ -60,15 +61,17 @@ const Index: React.FC<IndexProps> = ({ projects, reversed = false }) => {
 
   return (
     <div onMouseMove={manageMouseMove} className={styles.double}>
-      <div ref={firstImage} className={styles.imageContainer}>
+      <div  ref={firstImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image
-            src={projects[0].src}
-            fill={true}
-            alt={projects[0].name}
-            priority={true}
-            sizes="1980px"
-          />
+          <a href={projects[0].link} target="_blank" rel="noreferrer">
+            <Image
+              src={projects[0].src}
+              fill={true}
+              alt={projects[0].name}
+              priority={true}
+              sizes="1980px"
+            />
+          </a>
         </div>
         <div className={styles.body}>
           <h3>{projects[0].name}</h3>
@@ -79,12 +82,14 @@ const Index: React.FC<IndexProps> = ({ projects, reversed = false }) => {
 
       <div ref={secondImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image
-            src={projects[1].src}
-            fill={true}
-            alt={projects[1].name}
-            sizes="1980px"
-          />
+          <a href={projects[1].link} target="_blank" rel="noreferrer">
+            <Image
+              src={projects[1].src}
+              fill={true}
+              alt={projects[1].name}
+              sizes="1980px"
+            />
+          </a>
         </div>
         <div className={styles.body}>
           <h3>{projects[1].name}</h3>

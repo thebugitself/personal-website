@@ -11,6 +11,7 @@ export const projects = [
       "A tourism and UMKM website for Desa Sukamarga, showcasing its natural beauty and local businesses. Built with Next.js, Prisma, and TailwindCSS.",
     src: wisata1,
     year: 2025,
+    link: "https://github.com/kknsukamarga/wisatasukamarga"
   },
   {
     name: "PPLK ITERA 2024",
@@ -19,6 +20,7 @@ export const projects = [
       "A website for PPLK ITERA 2024, a student organization in ITERA. Built with Laravel, React, and TailwindCSS.",
     src: pplk11,
     year: 2024,
+    link: "https://github.com/PPLK-ITERA"
   },
   {
     name: "The Forest Keeper",
@@ -27,6 +29,7 @@ export const projects = [
       "Game project for the final assignment in the Game Technology course, built with the Godot Engine.",
     src: forest1,
     year: 2024,
+    link: "https://github.com/aloisiusedwin/The-Forest-Keeper"
   },
   {
     name: "Unenlightened",
@@ -35,5 +38,6 @@ export const projects = [
       "Game project for the final assignment in the Object-Oriented Programming course, built with the Pygame library.",
     src: pbo1,
     year: 2024,
+    link: "https://github.com/thebugitself/Unenlightened"
   },
 ];
