@@ -23,14 +23,8 @@ const SkillsCarousel = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="h-full"
         >
-          {/* Skills Section */}
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              {/* Uncomment jika ingin menambahkan judul dan deskripsi */}
-              {/* <h1 className="text-4xl font-bold text-accent">Technical Proficiency</h1>
-              <p className="text-lg text-white/80">
-                Showcasing my proficiency in various languages, frameworks, and tools.
-              </p> */}
             </div>
             <div className="w-4/5 m-auto overflow-hidden">
               <Marquee speed={100} gradient={false}>
@@ -41,7 +35,19 @@ const SkillsCarousel = () => {
                       className="flex flex-col items-center space-y-4"
                     >
                       <div className="text-accent text-7xl p-6 rounded-lg bg-transparent">
-                        <skill.icon />
+                        <AnimatePresence>
+                          {isVisible && (
+                            <motion.div
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.9 }}
+                              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                            >
+                            {skill.icon(
+                              { className: "text-accent text-7xl" }
+                            )}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                       <div className="text-white bg-white/10 p-3 rounded-xl text-center font-medium">
                         {skill.name}
