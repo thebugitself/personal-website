@@ -17,10 +17,10 @@ const links = [
   //   name: "blog",
   //   path: "/blog",
   // },
-  {
-    name: "terminal",
-    path: "/terminal",
-  },
+  // {
+  //   name: "terminal",
+  //   path: "/terminal",
+  // },
 ];
 
 const Nav = () => {
