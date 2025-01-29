@@ -16,10 +16,10 @@ const links = [
     name: "Projects",
     path: "/projects",
   },
-  {
-    name: "blog",
-    path: "/blog",
-  },
+  // {
+  //   name: "blog",
+  //   path: "/blog",
+  // },
   {
     name: "terminal",
     path: "/terminal",

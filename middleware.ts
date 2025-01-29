@@ -5,7 +5,7 @@ import { jwtVerify } from "jose";
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl.pathname;
 
-  const publicPaths = ["/blog", "/blog/:slug", "/login", "/terminal"];
+  const publicPaths = ["/login", "/terminal", "/projects"];
   if (publicPaths.some((path) => url.startsWith(path))) {
     return NextResponse.next();
   }
