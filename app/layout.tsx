@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import EffectTransition from "@/components/EffectTransition";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header />
         <EffectTransition />
         <PageTransition>{children}</PageTransition>
+        <Analytics />
       </body>
     </html>
   );

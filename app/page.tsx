@@ -8,7 +8,7 @@ import Stats from "@/components/Stats";
 export default function Home() {
   const marqueeVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { delay: 1, duration: 0.5, ease: "easeInOut" },
     },
@@ -50,12 +50,12 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>I&apos;m Akhdan</span>
             <h1 className="h1 mb-6">
-              FULLSTACK <br />
-              <span className="text-accent">DEVELOPER.</span>
+              PENETRATION <br />
+              <span className="text-accent">TESTER.</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
               {
-                "I'm a Fullstack Developer based in Indonesia. I specialize in building Web Applications using Next JS and other modern tech."
+                "Penetration Tester based in Indonesia, specializing in web application security, vulnerability assessment, and ethical hacking."
               }
             </p>
           </div>
