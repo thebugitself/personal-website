@@ -4,15 +4,15 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    num: 6969,
+    num: 3769,
     text: "Cups of coffee",
   },
   {
-    num: 21234693,
+    num: 77375674,
     text: "Mouse clicks",
   },
   {
-    num: 38634321,
+    num: 75252580,
     text: "Key presses",
   },
 ];

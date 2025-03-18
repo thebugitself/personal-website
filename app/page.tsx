@@ -48,14 +48,14 @@ export default function Home() {
             <Photo />
           </div>
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>I&apos;m Akhdan</span>
+            <span>Located in Indonesia</span>
             <h1 className="h1 mb-6">
-              PENETRATION <br />
-              <span className="text-accent">TESTER.</span>
+            Greetings,<br />
+              <span className="text-accent">I&apos;m Akhdan</span>
             </h1>
             <p className="max-w-[500px] text-white/80">
               {
-                "Penetration Tester based in Indonesia, specializing in web application security, vulnerability assessment, and ethical hacking."
+                "I'm a Penetration Tester, focused on securing web applications and finding vulnerabilities."
               }
             </p>
           </div>
